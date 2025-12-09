@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dkarsol Construction Services - Professional Building & Renovation in Ile-Ife, Osun State">
+    <title>DKARSOL | Excellence in Construction</title>
+    <link rel="icon" href="images/icon/dkarsol.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css">
+
+    <style>
+        /* Makes everything breathe – removes jampacked look */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      line-height: 1.6;
+    }
+    
+    /* Add space above and below sections */
+    section, header, footer {
+      padding: 60px 20px;
+    }
+    
+    /* Hero section (the big welcome image) – full screen & beautiful */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), 
+                  url('your-hero-image.jpg') center/cover no-repeat fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+    }
+    
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 900;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    }
+    
+    .hero p {
+      font-size: 1.4rem;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+    
+    /* Buttons – bigger and spaced out */
+    .btn {
+      display: inline-block;
+      padding: 16px 32px;
+      margin: 12px;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    
+    .btn-primary { background: #007bff; color: white; }
+    .btn-success { background: #25d366; color: white; }
+    
+    .btn:hover { transform: scale(1.05); }
+    
+    /* WhatsApp floating button (bottom right) */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    
+    /* Responsive fix – never too squished */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.5rem; }
+      .hero p { font-size: 1.1rem; }
+      section { padding: 50px 15px; }
+    }
+          /* Smaller Elegant Counters */
+          .stats{padding:4rem 0;background:var(--primary);color:#fff}
+        .stat-card{background:rgba(255,255,255,.1);backdrop-filter:blur(10px);border-radius:var(--radius);padding:1.8rem 1rem;text-align:center;transition:.3s}
+        .stat-num{font-size:2.4rem;font-weight:900;color:var(--success);margin:0.5rem 0}
+        .stat-label{font-size:1rem;font-weight:600;opacity:.9}
+
+        :root { --primary: #535da1; --dark: #111; --success: #0ddb66; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.7; color: #333; overflow-x: hidden; }
+        h1,h2,h3,h4,h5,h6 { font-weight: 700; color: var(--dark);
+                                        background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;}
+
+        /* Floating WhatsApp */
+        .whatsapp-float {
+            position: fixed; width: 64px; height: 64px; bottom: 25px; right: 25px;
+            background: #25D366; color: white; border-radius: 50%; text-align: center;
+            font-size: 36px; box-shadow: 0 6px 25px rgba(0,0,0,0.3); z-index: 1000;
+            animation: pulse 2s infinite; transition: 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.2); background: #128C7E; }
+        .whatsapp-float i { margin-top: 13px; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); } 70% { box-shadow: 0 0 0 20px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
+
+        .hero {
+            min-height: 100vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+            url('images/WhatsApp Image 2025-11-27 at 15.53.22_41b8529a.jpg') center/cover no-repeat fixed;
+            color: white; display: flex; align-items: center;
+                          background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+            
+        }
+        .hero h1 { font-size: 4.5rem; font-weight: 900; }
+        @media (max-width: 768px) { .hero h1 { font-size: 3rem; } }
+
+        /* Interactive Info Cards */
+        .info-card {
+            background: white; border-radius: 20px; padding: 30px; text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: 0.4s; height: 100%;
+        }
+        .info-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(83,93,161,0.2); }
+        .info-card i { font-size: 3rem; color: var(--primary); margin-bottom: 20px; }
+        .info-card a { color: var(--primary); text-decoration: none; font-weight: 600; }
+
+        /* Flip Cards */
+        .flip-card { background: transparent; height: 380px; perspective: 1000px; }
+        .flip-card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.8s; transform-style: preserve-3d; }
+        .flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+        .flip-card-front, .flip-card-back {
+            position: absolute; width: 100%; height: 100%; backface-visibility: hidden;
+            border-radius: 20px; padding: 30px; display: flex; flex-direction: column; justify-content: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .flip-card-front { background: white; color: #333; }
+        .flip-card-back { background: var(--primary); color: white; transform: rotateY(180deg); }
+        .flip-card-back a {
+            background: white; color: var(--primary); padding: 12px 30px; border-radius: 50px;
+            text-decoration: none; font-weight: 600; margin-top: 20px; display: inline-block;
+        }
+
+        .section-title {
+            font-size: 3rem; font-weight: 800; position: relative; display: inline-block;
+        }
+        .section-title::after {
+            content: ''; position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%);
+            width: 100px; height: 5px; background: var(--primary); border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/2347039180011?text=Hello%20Dkarsol!%20I'm%20ready%20to%20start%20my%20project" class="whatsapp-float" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary fs-2" href="#">DKARSOL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto gap-4 fs-5">
+                    <li><a class="nav-link" href="#home">Home</a></li>
+                    <li><a class="nav-link" href="#about">About</a></li>
+                    <li><a class="nav-link" href="#services">Services</a></li>
+                    <li><a class="nav-link" href="#projects">Projects</a></li>
+                    <li><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+   <!-- HERO - Fully Responsive & Beautiful -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 style="color: white;">Hi there!<br>Welcome to Dkarsol Construction</h1>
+            <p class="lead">We Build with Precision, Quality & Integrity.</p>
+            <div class="mt-5">
+                <a href="#contact" class="btn btn-primary btn-lg px-5 me-3">Start a Project</a>
+                <a href="https://wa.me/2347039180011" class="btn btn-success btn-lg px-5">
+                    Chat Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+<!-- Floating WhatsApp Button (always visible) -->
+<a href="https://wa.me/234XXXXXXXXXX" class="whatsapp-float" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+       width="60" height="60" 
+       style="border-radius:50%; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+</a>
+   <!-- NEW: Beautiful Introduction Section (the space you wanted) -->
+    <section class="bg-white" id="intro">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h2 class="section-title">Welcome to Dkarsol Construction</h2>
+                    <p class="lead mt-4">Excellence in every brick. Trust in every project.</p>
+                    <p>We offer integrated building solutions, from planning and structural design to construction, finishing, and site supervision. Whether you need a new home, a commercial facility, or renovations, we deliver with precision, quality materials, and skilled craftsmanship. Our commitment to transparency, timely delivery, and durable results ensures your project is built to last and handled with professionalism you can trust.</p>
+                     <a href="/html/about.html" class="btn btn-primary btn-lg mt-3">Learn More About Us</a>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="images/dkar.jpg" alt="Dkarsol Construction " class="img-fluid rounded-4 shadow-lg" style="max-height: 480px; object-fit: cover;">
+                    <!-- If you don’t have that image yet, use any professional construction photo -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Interactive Information Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Company Information</h2>
+            </div>
+         <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="info-card">
+                        <i class="bi bi-building"></i>
+                        <h4>Dkarsol Construction</h4>
+                        <p>Trust in every project.</p>
+                    </div>
+                </div>
+           
+                <div class="col-md-6 col-lg-3">
+                    <div class="info-card">
+                        <i class="bi bi-telephone-fill"></i>
+                        <h4>Call Us</h4>
+                        <a href="tel:+2347039180011">+234 703 918 0011</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="info-card">
+                        <i class="bi bi-envelope-fill"></i>
+                        <h4>Email</h4>
+                        <a href="mailto:dkarsolconstruction@gmail.com">dkarsolconstruction@gmail.com</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="info-card">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <h4>Visit Us</h4>
+                        <p>Plot 1, Alakowe, Ife–Ilesa Expressway, Osun state, Nigeria.</p>
+                        <a href="https://maps.google.com/?q=Plot+1+Alakowe+Ife-Ilesa+Expressway+Ile-Ife" target="_blank" class="text-primary">Open in Maps</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <p><strong>Open:</strong> Monday – Saturday: 8AM – 6PM</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Smaller Elegant Counters -->
+    <section class="stats">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-num" data-count="3">3+</div><div class="stat-label">Years Experience</div></div></div>
+                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-num" data-count="3">3+</div><div class="stat-label">Projects Completed</div></div></div>
+                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-num" data-count="6">6</div><div class="stat-label">Happy Clients</div></div></div>
+                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-num" data-count="3">3+</div><div class="stat-label">Testimonies</div></div></div>
+            </div>
+        </div>
+    </section>
+     <section id="services" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Our Professional Afflliation</h2>
+                </div>
+            <div class="d-flex justify-content-center" style="gap: 20px;" >
+                <div class=" clients-item-height text-center" style="max-width: 190PX;">
+                    <img src="images/clients/redcross-removebg-preview.png" class="clients-image img-fluid" alt="" width="100PX" height="100PX">
+                  <p style="font-size: 15px;"> Nigeria Red Cross Society (NRCS)</p> 
+                </div>
+
+                <div class=" clients-item-height text-center" style="max-width: 200PX;">
+                    <img src="images/clients/nib-removebg-preview.png" class="clients-image img-fluid" alt="" width="100PX" height="100px">
+               <p style="font-size: 15px;">Nigeria Institute Of Building (NIOB)</p> 
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- All 8 Interactive Flip Cards -->
+    <section id="services" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Our Services</h2>
+                <p class="text-muted">Hover or tap to discover more</p>
+            </div>
+            <div class="row g-4">
+                <!-- 1-8 Flip Cards (All Complete) -->
+                <div class="col-md-6 col-lg-3"><div class="flip-card"><div class="flip-card-inner">
+                    <div class="flip-card-front"><i class="bi bi-house-door-fill"></i><h3>Building Construction</h3><p>We deliver strong and reliable structures for:
+</p></div>
+                    <div class="flip-card-back"><p>Homes & residential buildings</p><p>Commercial properties</p><p>Blocks of flats</p><p>Small-to-medium developments</p>
+                        <a href="https://wa.me/2347039180011?text=Hi!%20I'm%20interested%20in%20Building%20Construction">Discover More</a></div>
+                </div></div></div>
+        
+                <div class="col-md-6 col-lg-3"><div class="flip-card"><div class="flip-card-inner">
+                    <div class="flip-card-front"><i class="bi bi-tools"></i><h3>Renovation & Remodeling</h3><p>We transform old or damaged spaces through:</p></div>
+                    <div class="flip-card-back"><p>Structural repairs</p><p>Full renovations</p><p>Reconfiguration of rooms</p><p>Modern interior and exterior upgrades</p>
+                        <a href="https://wa.me/2347039180011?text=Hi!%20I'm%20interested%20in%20Renovation">Discover More</a></div>
+                </div></div></div>
+
+                 <div class="col-md-6 col-lg-3"><div class="flip-card"><div class="flip-card-inner">
+                    <div class="flip-card-front"><i class="bi bi-hammer"></i><h3>Roofing Solutions</h3><p>Professional installation of:</p></div>
+                    <div class="flip-card-back"><p>Aluminium roofing</p><p>Stone-coated roofing</p><p>Long-span sheets</p><p>Leak-proof, heat-friendly roofing systems</p>
+                        <a href="https://wa.me/2347039180011?text=Hi!%20I'm%20interested%20in%20Roofing">Discover More</a></div>
+                </div></div></div>
+
+                <div class="col-md-6 col-lg-3"><div class="flip-card"><div class="flip-card-inner">
+                    <div class="flip-card-front"><i class="bi bi-brush"></i><h3>Interior & Exterior Finishing</h3><p>Premium finishing services including:</p></div>
+                    <div class="flip-card-back"><p>POP ceilings</p><p>Screeding & painting</p><p>Tiling & flooring</p><p>Plumbing & electrical finishing</p><p>Windows, doors, fittings, and detailing</p>
+                        <a href="https://wa.me/2347039180011?text=Hi!%20I'm%20interested%20in%20Finishing">Discover More</a></div>
+                </div></div></div>
+
+                <div class="col-md-6 col-lg-3"><div class="flip-card"><div class="flip-card-inner">
+                    <div class="flip-card-front"><i class="bi bi-person-gear"></i><h3>Project Management & Supervision</h3><p>We ensure your project is properly executed through:</p></div>
+                    <div class="flip-card-back"><p>Quality control</p><p>Timeline management.</p><p>Material monitoring</p><p>Site safety supervision</p><p>Transparent communication</p>
+                        <a href="https://wa.me/2347039180011?text=Hi!%20I'm%20interested%20in%20Project%20Management">Discover More</a></div>
+                </div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Our Projects</h2>
+            </div>
+            <div class="row g-4 popup-gallery">
+                <div class="col-md-6 col-lg-4">
+                    <a href="images/IMG-20251120-WA0481.jpg"><img src="images/IMG-20251120-WA0481.jpg" class="img-fluid rounded-4 shadow" alt=""></a>
+                    <p class="mt-3 text-center fw-bold">Full Renovation • Ile-Ife</p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <a href="images/projects/oak house.PNG"><img src="images/projects/oak house.PNG" class="img-fluid rounded-4 shadow" alt=""></a>
+                    <p class="mt-3 text-center fw-bold">  Oak House Residential Development • Ile-Ife, Osun State Residential</p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <a href="images/projects/palace.PNG"><img src="images/projects/palace.PNG" class="img-fluid rounded-4 shadow" alt=""></a>
+                    <p class="mt-3 text-center fw-bold">Queen Consort Residence • Ooni Palace</p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <a href="images/projects/ongoing .jpg"><img src="images/projects/ongoing .jpg" class="img-fluid rounded-4 shadow" alt=""></a>
+                    <p class="mt-3 text-center fw-bold">Ongoing Renovation Project • Ile-Ife, Osun state.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5 bg-dark text-white">
+        <div class="container py-5 text-center">
+            <h2 class="display-5 fw-bold">Start Your Project Today</h2>
+            <h2 class="display-5 fw-bold">Let’s Build Your Dream Project</h2>
+            <p class="lead">Send us a message or tap WhatsApp for instant chat</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <form action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="a677c70b-0364-4b19-bac2-3dd4dd9bc7e3">
+                    <div class="row g-4">
+                        <div class="col-md-6"><input type="text" name="name" class="form-control form-control-lg" placeholder="Your Name" required></div>
+                        <div class="col-md-6"><input type="tel" name="phone" class="form-control form-control-lg" placeholder="Phone Number" required></div>
+                        <div class="col-12"><input type="email" name="email" class="form-control form-control-lg" placeholder="Email (optional)"></div>
+                        <div class="col-12">
+                            <select name="service" class="form-select form-control-lg" required>
+                                <option value="">Select Service</option>
+                                <option>Building Construction</option>
+                                <option>Renovation & Remodeling</option>
+                                <option>Roofing Solutions</option>
+                                <option>Interior and Exterior design</option>
+                                <option>Project management & Site supervision</option>
+                            </select>
+
+                        </div>
+                        <div class="col-12"><textarea name="message" class="form-control form-control-lg" rows="6" placeholder="Tell us about your project..." required></textarea></div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-primary btn-lg px-5">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <footer class="bg-black text-white py-4 text-center">
+        <p>&copy; 2025 Dkarsol Construction Services. All Rights Reserved. | +234 703 918 0011</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js"></script>
+    <script>
+        const form = document.getElementById('form');
+const submitBtn = form.querySelector('button[type="submit"]');
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    formData.append("access_key", "d310b5ae-8f9a-4687-bd67-6c336b800f7c");
+
+    const originalText = submitBtn.textContent;
+
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
+
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            alert("Success! Your message has been sent.");
+            form.reset();
+        } else {
+            alert("Error: " + data.message);
+        }
+
+    } catch (error) {
+        alert("Something went wrong. Please try again.");
+    } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    }
+});
+        import { useState } from 'react';
+
+export default function ContactForm() {
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    formData.append("access_key", "d310b5ae-8f9a-4687-bd67-6c336b800f7c");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+    setResult(data.success ? "Success!" : "Error");
+  };
+
+  return (
+    <form onSubmit={onSubmit}>
+      <input type="text" name="name" required/>
+      <input type="email" name="email" required/>
+      <textarea name="message" required></textarea>
+      <button type="submit">Submit</button>
+      <p>{result}</p>
+    </form>
+  );
+}
+            // Counter Animation
+            const counters = document.querySelectorAll('.stat-num');
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                counters.forEach(c => {
+                    const target = +c.dataset.count;
+                    let count = 0;
+                    const timer = setInterval(() => {
+                        count += Math.ceil(target / 80);
+                        if (count >= target) {
+                            c.textContent = target + (c.textContent.includes('.') ? '' : '+');
+                            clearInterval(timer);
+                        } else c.textContent = count;
+                    }, 30);
+                });
+                observer.unobserve(entries[0].target);
+            }
+        }, { threshold: 0.6 });
+        observer.observe(document.querySelector('.stats'));
+
+        // Mobile flip
+        document.querySelectorAll('.flip-card').forEach(card => {
+            card.addEventListener('click', () => card.classList.toggle('flipped'));
+        });
+        $(document).ready(function() {
+            $('.popup-gallery').magnificPopup({
+                delegate: 'a', type: 'image', gallery: { enabled: true }, mainClass: 'mfp-fade'
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
